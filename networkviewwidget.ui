@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NetworkViewWidget</class>
+ <widget class="QWidget" name="NetworkViewWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>690</width>
+    <height>519</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QGraphicsView" name="diagram">
+       <property name="minimumSize">
+        <size>
+         <width>560</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="verticalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOff</enum>
+       </property>
+       <property name="horizontalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOff</enum>
+       </property>
+       <property name="interactive">
+        <bool>false</bool>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+       </property>
+       <property name="renderHints">
+        <set>QPainter::Antialiasing|QPainter::TextAntialiasing</set>
+       </property>
+       <property name="cacheMode">
+        <set>QGraphicsView::CacheBackground</set>
+       </property>
+       <property name="viewportUpdateMode">
+        <enum>QGraphicsView::BoundingRectViewportUpdate</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QPushButton" name="buttonStart">
+         <property name="text">
+          <string>&amp;Train</string>
+         </property>
+         <property name="icon">
+          <iconset theme="media-playback-start" resource="icons.qrc">
+           <normaloff>:/icons/media-playback-start.svg</normaloff>:/icons/media-playback-start.svg</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="buttonPause">
+         <property name="text">
+          <string>&amp;Pause</string>
+         </property>
+         <property name="icon">
+          <iconset theme="media-playback-pause" resource="icons.qrc">
+           <normaloff>:/icons/media-playback-pause.svg</normaloff>:/icons/media-playback-pause.svg</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="buttonResume">
+         <property name="text">
+          <string>&amp;Resume</string>
+         </property>
+         <property name="icon">
+          <iconset theme="media-playback-start" resource="icons.qrc">
+           <normaloff>:/icons/media-playback-start.svg</normaloff>:/icons/media-playback-start.svg</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="buttonStop">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>&amp;Stop</string>
+         </property>
+         <property name="icon">
+          <iconset theme="media-playback-stop" resource="icons.qrc">
+           <normaloff>:/icons/media-playback-stop.svg</normaloff>:/icons/media-playback-stop.svg</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="buttonOptions">
+         <property name="text">
+          <string>&amp;Options</string>
+         </property>
+         <property name="icon">
+          <iconset theme="configure" resource="icons.qrc">
+           <normaloff>:/icons/configure.svg</normaloff>:/icons/configure.svg</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="buttonIntervalSkipLeft">
+         <property name="toolTip">
+          <string>Decrease training speed to the minimum</string>
+         </property>
+         <property name="icon">
+          <iconset theme="media-skip-backward" resource="icons.qrc">
+           <normaloff>:/icons/media-skip-backward.svg</normaloff>:/icons/media-skip-backward.svg</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="buttonIntervalLeft">
+         <property name="toolTip">
+          <string>Decrease training speed</string>
+         </property>
+         <property name="icon">
+          <iconset theme="media-seek-backward" resource="icons.qrc">
+           <normaloff>:/icons/media-seek-backward.svg</normaloff>:/icons/media-seek-backward.svg</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSlider" name="sliderSampleDelay">
+         <property name="minimum">
+          <number>20</number>
+         </property>
+         <property name="maximum">
+          <number>1000</number>
+         </property>
+         <property name="singleStep">
+          <number>100</number>
+         </property>
+         <property name="pageStep">
+          <number>100</number>
+         </property>
+         <property name="value">
+          <number>500</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="invertedAppearance">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="buttonIntervalRight">
+         <property name="toolTip">
+          <string>Increase training speed</string>
+         </property>
+         <property name="icon">
+          <iconset theme="media-seek-forward" resource="icons.qrc">
+           <normaloff>:/icons/media-seek-forward.svg</normaloff>:/icons/media-seek-forward.svg</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="buttonIntervalSkipRight">
+         <property name="toolTip">
+          <string>Increase training speed to the maximum</string>
+         </property>
+         <property name="icon">
+          <iconset theme="media-skip-forward" resource="icons.qrc">
+           <normaloff>:/icons/media-skip-forward.svg</normaloff>:/icons/media-skip-forward.svg</iconset>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>

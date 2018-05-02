@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="network">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="network-details" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="type" type="xs:string"/>
+                            <xs:element name="name">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:minLength value="1"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="description" type="xs:string" minOccurs="0"/>
+                            <xs:element name="initial-weights" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="random-min" type="xs:double" minOccurs="0"/>
+                                        <xs:element name="random-max" type="xs:double" minOccurs="0"/>
+                                        <xs:element name="value" type="xs:double" minOccurs="0"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="training-options" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="activation-function" minOccurs="0">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:minLength value="1"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="learning-rate" minOccurs="0">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:double">
+                                                    <xs:minInclusive value="0.000001"/>
+                                                    <xs:maxInclusive value="1"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="max-epochs" minOccurs="0">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:integer">
+                                                    <xs:minInclusive value="0"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="pause-after-sample" type="xs:boolean" minOccurs="0"/>
+                                        <xs:element name="sample-selection-order" minOccurs="0">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:minLength value="1"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="stop-error" minOccurs="0">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:double">
+                                                    <xs:minInclusive value="0"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="stop-percentage" minOccurs="0">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:double">
+                                                    <xs:minInclusive value="0"/>
+                                                    <xs:maxInclusive value="100"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="stop-samples" minOccurs="0">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:integer">
+                                                    <xs:minInclusive value="0"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="train-rbf-layer" type="xs:boolean" minOccurs="0"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="layers">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="layer" minOccurs="2" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="type">
+                                                        <xs:simpleType>
+                                                            <xs:restriction base="xs:string">
+                                                                <xs:minLength value="1"/>
+                                                            </xs:restriction>
+                                                        </xs:simpleType>
+                                                    </xs:element>
+                                                    <xs:element name="name">
+                                                        <xs:simpleType>
+                                                            <xs:restriction base="xs:string">
+                                                                <xs:minLength value="1"/>
+                                                            </xs:restriction>
+                                                        </xs:simpleType>
+                                                    </xs:element>
+                                                    <xs:element name="neurons">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="neuron" minOccurs="1" maxOccurs="unbounded">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="name">
+                                                                                <xs:simpleType>
+                                                                                    <xs:restriction base="xs:string">
+                                                                                        <xs:minLength value="1"/>
+                                                                                    </xs:restriction>
+                                                                                </xs:simpleType>
+                                                                            </xs:element>
+                                                                            <xs:element name="position-x" minOccurs="0">
+                                                                                <xs:simpleType>
+                                                                                    <xs:restriction base="xs:integer">
+                                                                                        <xs:minInclusive value="0"/>
+                                                                                    </xs:restriction>
+                                                                                </xs:simpleType>
+                                                                            </xs:element>
+                                                                            <xs:element name="position-y" minOccurs="0">
+                                                                                <xs:simpleType>
+                                                                                    <xs:restriction base="xs:integer">
+                                                                                        <xs:minInclusive value="0"/>
+                                                                                    </xs:restriction>
+                                                                                </xs:simpleType>
+                                                                            </xs:element>
+                                                                            <xs:element name="sigma" minOccurs="0">
+                                                                                <xs:simpleType>
+                                                                                    <xs:restriction base="xs:double">
+                                                                                        <xs:minInclusive value="0"/>
+                                                                                    </xs:restriction>
+                                                                                </xs:simpleType>
+                                                                            </xs:element>
+                                                                            <xs:element name="input-weights" minOccurs="0">
+                                                                                <xs:complexType>
+                                                                                    <xs:sequence>
+                                                                                        <xs:element name="weight" type="xs:double" minOccurs="0" maxOccurs="unbounded"/>
+                                                                                    </xs:sequence>
+                                                                                </xs:complexType>
+                                                                            </xs:element>
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="training-samples" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="sample" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="value" type="xs:double" minOccurs="0" maxOccurs="unbounded"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

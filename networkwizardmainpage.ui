@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NetworkWizardMainPage</class>
+ <widget class="QWizardPage" name="NetworkWizardMainPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>836</width>
+    <height>470</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>WizardPage</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout_2">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,1">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QLabel" name="labelSelectType">
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Select network type:</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="QRadioButton" name="radioButtonSLP">
+         <property name="text">
+          <string>&amp;Single-Layer Perceptron</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QRadioButton" name="radioButtonRBF">
+         <property name="text">
+          <string>&amp;Radial Basis Function Network</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QRadioButton" name="radioButtonMLP">
+         <property name="text">
+          <string>&amp;Multi-Layer Perceptron</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QRadioButton" name="radioButtonKohonen">
+         <property name="text">
+          <string>&amp;Kohonen Self Organizing Map</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="1" column="0">
+        <widget class="QRadioButton" name="radioButtonAdaline">
+         <property name="text">
+          <string>&amp;ADALINE</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout" stretch="1">
+       <item>
+        <widget class="QLabel" name="labelSelectExample">
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Select example to load:</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QListWidget" name="listExamples">
+       <property name="minimumSize">
+        <size>
+         <width>550</width>
+         <height>380</height>
+        </size>
+       </property>
+       <property name="editTriggers">
+        <set>QAbstractItemView::NoEditTriggers</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="checkBoxCreateNewNetwork">
+       <property name="text">
+        <string>&amp;Create a new network</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>radioButtonSLP</tabstop>
+  <tabstop>radioButtonAdaline</tabstop>
+  <tabstop>radioButtonMLP</tabstop>
+  <tabstop>radioButtonKohonen</tabstop>
+  <tabstop>radioButtonRBF</tabstop>
+  <tabstop>listExamples</tabstop>
+  <tabstop>checkBoxCreateNewNetwork</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

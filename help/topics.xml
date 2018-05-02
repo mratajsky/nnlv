@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items>
+    <topic>
+        <title>Neural Network Wizard</title>
+        <file>wizard.html</file>
+        <items>
+            <topic>
+                <title>Single-Layer Perceptron</title>
+                <file>wizard-slp.html</file>
+            </topic>
+            <topic>
+                <title>ADALINE</title>
+                <file>wizard-adaline.html</file>
+            </topic>
+            <topic>
+                <title>Multi-Layer Perceptron</title>
+                <file>wizard-mlp.html</file>
+            </topic>
+            <topic>
+                <title>Kohonen Self-Organizing Map</title>
+                <file>wizard-kohonen.html</file>
+            </topic>
+            <topic>
+                <title>Radial Basis Function Network</title>
+                <file>wizard-rbf.html</file>
+            </topic>
+        </items>
+    </topic>
+    <topic>
+        <title>User Interface</title>
+        <file>ui.html</file>
+        <items>
+            <topic>
+                <title>Training</title>
+                <file>ui-training.html</file>
+            </topic>
+            <topic>
+                <title>Configure Training Set</title>
+                <file>ui-training-set.html</file>
+            </topic>
+            <topic>
+                <title>Network Layout</title>
+                <file>ui-panels-layout.html</file>
+            </topic>
+            <topic>
+                <title>Reset Connection Weights</title>
+                <file>ui-reset-weights.html</file>
+            </topic>
+            <topic>
+                <title>Visualization Panels</title>
+                <file>ui-panels.html</file>
+                <items>
+                    <topic>
+                        <title>Input Space</title>
+                        <file>ui-panels-input-space.html</file>
+                    </topic>
+                    <topic>
+                        <title>Network Error</title>
+                        <file>ui-panels-error.html</file>
+                    </topic>
+                    <topic>
+                        <title>Network Status</title>
+                        <file>ui-panels-status.html</file>
+                    </topic>
+                </items>
+            </topic>
+        </items>
+    </topic>
+    <topic>
+        <title>Menu Categories</title>
+        <file>menu.html</file>
+        <items>
+            <topic>
+                <title>File</title>
+                <file>menu-file.html</file>
+            </topic>
+            <topic>
+                <title>Neural Network</title>
+                <file>menu-neural-network.html</file>
+            </topic>
+            <topic>
+                <title>Window</title>
+                <file>menu-window.html</file>
+            </topic>
+            <topic>
+                <title>Help</title>
+                <file>menu-help.html</file>
+            </topic>
+        </items>
+    </topic>
+    <topic>
+        <title>Authors and Acknowledgements</title>
+        <file>ack.html</file>
+    </topic>
+</items>

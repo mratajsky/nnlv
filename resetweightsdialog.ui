@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ResetWeightsDialog</class>
+ <widget class="QDialog" name="ResetWeightsDialog">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>638</width>
+    <height>222</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Reset Connection Weights</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="sizeConstraint">
+    <enum>QLayout::SetFixedSize</enum>
+   </property>
+   <item>
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="labelHeadingWeights">
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Weight Values</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QRadioButton" name="radioRange">
+       <property name="text">
+        <string>Rando&amp;m values in the range:</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QRadioButton" name="radioValue">
+       <property name="text">
+        <string>All the same selected &amp;value:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QDoubleSpinBox" name="editValue">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="decimals">
+        <number>6</number>
+       </property>
+       <property name="minimum">
+        <double>-1000000.000000000000000</double>
+       </property>
+       <property name="maximum">
+        <double>1000000.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QDoubleSpinBox" name="editRangeMin">
+         <property name="decimals">
+          <number>6</number>
+         </property>
+         <property name="minimum">
+          <double>-1000000.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000000.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>1.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>-1.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>-</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDoubleSpinBox" name="editRangeMax">
+         <property name="decimals">
+          <number>6</number>
+         </property>
+         <property name="minimum">
+          <double>-1000000.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000000.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>1.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>1.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="labelHeadingLayers">
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Layer Connections</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_2">
+     <property name="font">
+      <font>
+       <italic>true</italic>
+      </font>
+     </property>
+     <property name="text">
+      <string>Connection weights between the selected layers will be changed to the selected values.</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>radioRange</tabstop>
+  <tabstop>editRangeMin</tabstop>
+  <tabstop>editRangeMax</tabstop>
+  <tabstop>radioValue</tabstop>
+  <tabstop>editValue</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>ResetWeightsDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>ResetWeightsDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

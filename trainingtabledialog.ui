@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TrainingTableDialog</class>
+ <widget class="QDialog" name="TrainingTableDialog">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>678</width>
+    <height>498</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Configure Training Set</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="3" column="0" colspan="5">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Close</set>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="4">
+    <widget class="QPushButton" name="buttonRemoveAll">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string>Remove All</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QPushButton" name="buttonExport">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string>&amp;Export...</string>
+     </property>
+     <property name="icon">
+      <iconset theme="document-export" resource="icons.qrc">
+       <normaloff>:/icons/document-export.svg</normaloff>:/icons/document-export.svg</iconset>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="2" column="0" colspan="5">
+    <widget class="QLabel" name="labelReadOnly">
+     <property name="font">
+      <font>
+       <italic>true</italic>
+      </font>
+     </property>
+     <property name="text">
+      <string>The training table is read-only while training is in progress.</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="5">
+    <widget class="QTableView" name="tableView">
+     <property name="minimumSize">
+      <size>
+       <width>660</width>
+       <height>400</height>
+      </size>
+     </property>
+     <property name="dragDropMode">
+      <enum>QAbstractItemView::InternalMove</enum>
+     </property>
+     <property name="gridStyle">
+      <enum>Qt::DashLine</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="3">
+    <widget class="QPushButton" name="buttonRemove">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string>&amp;Remove Selected Rows</string>
+     </property>
+     <property name="icon">
+      <iconset theme="edit-table-delete-row" resource="icons.qrc">
+       <normaloff>:/icons/edit-table-delete-row.svg</normaloff>:/icons/edit-table-delete-row.svg</iconset>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QPushButton" name="buttonImport">
+     <property name="text">
+      <string>&amp;Import...</string>
+     </property>
+     <property name="icon">
+      <iconset theme="document-import" resource="icons.qrc">
+       <normaloff>:/icons/document-import.svg</normaloff>:/icons/document-import.svg</iconset>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>tableView</tabstop>
+  <tabstop>buttonImport</tabstop>
+  <tabstop>buttonExport</tabstop>
+  <tabstop>buttonRemove</tabstop>
+  <tabstop>buttonRemoveAll</tabstop>
+ </tabstops>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>TrainingTableDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>270</x>
+     <y>390</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>TrainingTableDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>338</x>
+     <y>390</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

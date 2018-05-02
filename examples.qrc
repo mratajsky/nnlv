@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/">
+        <file>examples/slp-and.xml</file>
+        <file>examples/slp-clusters.xml</file>
+        <file>examples/slp-or.xml</file>
+        <file>examples/slp-xor.xml</file>
+        <file>examples/mlp-xor.xml</file>
+        <file>examples/adaline-and.xml</file>
+        <file>examples/adaline-or.xml</file>
+        <file>examples/kohonen-random.xml</file>
+        <file>examples/rbf-iris.xml</file>
+        <file>examples/adaline-clusters.xml</file>
+        <file>examples/kohonen-clusters.xml</file>
+        <file>examples/mlp-small-clusters.xml</file>
+        <file>examples/rbf-single-cluster.xml</file>
+    </qresource>
+</RCC>

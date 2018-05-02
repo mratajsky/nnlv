@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NetworkWizard</class>
+ <widget class="QWizard" name="NetworkWizard">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Neural Network Wizard</string>
+  </property>
+  <property name="wizardStyle">
+   <enum>QWizard::ModernStyle</enum>
+  </property>
+  <widget class="NetworkWizardMainPage" name="wizardPageMain">
+   <property name="title">
+    <string>Neural Network Wizard</string>
+   </property>
+   <property name="subTitle">
+    <string>Select an example to load or create a new neural network.</string>
+   </property>
+   <attribute name="pageId">
+    <string notr="true">0</string>
+   </attribute>
+  </widget>
+  <widget class="SLPNetworkWizardPage" name="wizardPageSLP">
+   <property name="title">
+    <string>Single-Layer Perceptron</string>
+   </property>
+   <property name="subTitle">
+    <string>Create a new SLP neural network with the specified properties.</string>
+   </property>
+   <attribute name="pageId">
+    <string notr="true">1</string>
+   </attribute>
+   <layout class="QVBoxLayout" name="verticalLayout_4">
+    <item>
+     <widget class="SLPCreateNetworkWidget" name="widgetSLP" native="true"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="AdalineNetworkWizardPage" name="wizardPageAdaline">
+   <property name="title">
+    <string>ADALINE</string>
+   </property>
+   <property name="subTitle">
+    <string>Create a new ADALINE neural network with the specified properties.</string>
+   </property>
+   <attribute name="pageId">
+    <string notr="true">2</string>
+   </attribute>
+   <layout class="QVBoxLayout" name="verticalLayout_5">
+    <item>
+     <widget class="AdalineCreateNetworkWidget" name="widgetAdaline" native="true"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="MLPNetworkWizardPage" name="wizardPageMLP">
+   <property name="title">
+    <string>Multi-Layer Perceptron</string>
+   </property>
+   <property name="subTitle">
+    <string>Create a new MLP neural network with the specified properties.</string>
+   </property>
+   <attribute name="pageId">
+    <string notr="true">3</string>
+   </attribute>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="MLPCreateNetworkWidget" name="widgetMLP" native="true"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="KohonenNetworkWizardPage" name="wizardPageKohonen">
+   <property name="title">
+    <string>Kohonen Self-Organizing Map</string>
+   </property>
+   <property name="subTitle">
+    <string>Create a new Kohonen SOM neural network with the specified properties.</string>
+   </property>
+   <attribute name="pageId">
+    <string notr="true">4</string>
+   </attribute>
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <widget class="KohonenCreateNetworkWidget" name="widgetKohonen" native="true"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="RBFNetworkWizardPage" name="wizardPageRBF">
+   <property name="title">
+    <string>Radial Basis Function Network</string>
+   </property>
+   <property name="subTitle">
+    <string>Create a new RBF neural network with the specified properties.</string>
+   </property>
+   <attribute name="pageId">
+    <string notr="true">5</string>
+   </attribute>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="RBFCreateNetworkWidget" name="widgetRBF" native="true"/>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>NetworkWizardMainPage</class>
+   <extends>QWizardPage</extends>
+   <header>networkwizardmainpage.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>SLPNetworkWizardPage</class>
+   <extends>QWizardPage</extends>
+   <header>slpnetworkwizardpage.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MLPNetworkWizardPage</class>
+   <extends>QWizardPage</extends>
+   <header>mlpnetworkwizardpage.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>KohonenNetworkWizardPage</class>
+   <extends>QWizardPage</extends>
+   <header>kohonennetworkwizardpage.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>RBFNetworkWizardPage</class>
+   <extends>QWizardPage</extends>
+   <header>rbfnetworkwizardpage.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MLPCreateNetworkWidget</class>
+   <extends>QWidget</extends>
+   <header>mlpcreatenetworkwidget.h</header>
+   <container>1</container>
+   <slots>
+    <signal>validityChanged()</signal>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>SLPCreateNetworkWidget</class>
+   <extends>QWidget</extends>
+   <header>slpcreatenetworkwidget.h</header>
+   <container>1</container>
+   <slots>
+    <signal>validityChanged()</signal>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>KohonenCreateNetworkWidget</class>
+   <extends>QWidget</extends>
+   <header>kohonencreatenetworkwidget.h</header>
+   <container>1</container>
+   <slots>
+    <signal>validityChanged()</signal>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>RBFCreateNetworkWidget</class>
+   <extends>QWidget</extends>
+   <header>rbfcreatenetworkwidget.h</header>
+   <container>1</container>
+   <slots>
+    <signal>validityChanged()</signal>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>AdalineCreateNetworkWidget</class>
+   <extends>QWidget</extends>
+   <header>adalinecreatenetworkwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>AdalineNetworkWizardPage</class>
+   <extends>QWizardPage</extends>
+   <header>adalinenetworkwizardpage.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

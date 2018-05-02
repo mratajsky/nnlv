@@ -1,0 +1,29 @@
+<html>
+<body>
+<h2>Training</h2>
+<p>
+    Use the training controls below the diagram to start, stop and control the training.
+</p>
+<p>
+    When training is in progress, some parts of the user interface will be greyed out to indicate that
+    the network properties are not adjustable during training. Ongoing training can be either paused or
+    stopped, pausing doesn't cause the number of training epochs to be reset to 0 and in the case of RBF networks,
+    it allows continuing training without re-training the RBF units, which otherwise happens each time training
+    is started.
+</p>
+<p>
+    The slider allows adjusting the delay before processing samples and therefore makes training slower or faster.
+</p>
+<h3>Training Options</h3>
+<p>
+    The <em>Training Options</em> dialog allows changing the training options which were provided at the time
+    the neural network was created. It also provides a checkbox to pause the training after processing
+    each sample.
+</p>
+<p>
+    The <em>Stop Conditions</em> part of the dialog allows selecting which conditions have to be met to have
+    the training process stopped automatically by checking the appropriate checkboxes and filling in the values.
+    By default, no stop conditions are selected for new networks and training must be stopped manually.
+</p>
+</body>
+</html>

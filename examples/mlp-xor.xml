@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<network>
+    <network-details>
+        <type>mlp</type>
+        <name>Multi-Layer Perceptron: XOR function</name>
+        <description>Classifier for the XOR logical function.</description>
+        <initial-weights>
+            <random-min>-10</random-min>
+            <random-max>10</random-max>
+        </initial-weights>
+        <training-options>
+            <activation-function>sigmoid</activation-function>
+            <learning-rate>0.8</learning-rate>
+            <sample-selection-order>random</sample-selection-order>
+        </training-options>
+        <layers>
+            <layer>
+                <type>input</type>
+                <name>Input Layer</name>
+                <neurons>
+                    <neuron>
+                        <name>Input #1</name>
+                    </neuron>
+                    <neuron>
+                        <name>Input #2</name>
+                    </neuron>
+                </neurons>
+            </layer>
+            <layer>
+                <type>hidden</type>
+                <name>Hidden Layer 1</name>
+                <neurons>
+                    <neuron>
+                        <name>Neuron #1</name>
+                        <input-weights>
+                            <weight>-0.0436784</weight>
+                            <weight>0.567719</weight>
+                            <weight>0.795608</weight>
+                        </input-weights>
+                    </neuron>
+                    <neuron>
+                        <name>Neuron #2</name>
+                        <input-weights>
+                            <weight>0.494308</weight>
+                            <weight>0.542874</weight>
+                            <weight>0.424761</weight>
+                        </input-weights>
+                    </neuron>
+                </neurons>
+            </layer>
+            <layer>
+                <type>output</type>
+                <name>Output Layer</name>
+                <neurons>
+                    <neuron>
+                        <name>Output #1</name>
+                        <input-weights>
+                            <weight>-0.230524</weight>
+                            <weight>0.0343921</weight>
+                            <weight>-0.270813</weight>
+                        </input-weights>
+                    </neuron>
+                </neurons>
+            </layer>
+        </layers>
+    </network-details>
+    <training-samples>
+        <sample>
+            <value>0</value>
+            <value>0</value>
+            <value>0</value>
+        </sample>
+        <sample>
+            <value>0</value>
+            <value>1</value>
+            <value>1</value>
+        </sample>
+        <sample>
+            <value>1</value>
+            <value>0</value>
+            <value>1</value>
+        </sample>
+        <sample>
+            <value>1</value>
+            <value>1</value>
+            <value>0</value>
+        </sample>
+    </training-samples>
+</network>

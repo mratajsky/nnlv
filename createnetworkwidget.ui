@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CreateNetworkWidget</class>
+ <widget class="QWidget" name="CreateNetworkWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>679</width>
+    <height>377</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QSplitter" name="splitter">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="childrenCollapsible">
+      <bool>false</bool>
+     </property>
+     <widget class="QWidget" name="layoutNetwork" native="true">
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <layout class="QVBoxLayout" name="layoutNetworkSelection">
+         <item>
+          <widget class="QRadioButton" name="radioButton">
+           <property name="text">
+            <string>Load an existing network</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="font">
+            <font>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Create a New Network</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="radioButtonSLP">
+           <property name="text">
+            <string>Single &amp;Layer Perceptron</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="radioButtonMLP">
+           <property name="text">
+            <string>&amp;Multi Layer Perceptron</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="radioButtonKohonen">
+           <property name="text">
+            <string>&amp;Kohonen Self-Organizing Map</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="radioButtonRBF">
+           <property name="text">
+            <string>Radial Basis Function Network</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>341</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>68</width>
+         <height>357</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<network>
+    <network-details>
+        <type>adaline</type>
+        <name>ADALINE: AND function</name>
+	<description>Classifier for the AND logical function.</description>
+        <initial-weights>
+            <random-min>-10</random-min>
+            <random-max>10</random-max>
+        </initial-weights>
+        <training-options>
+            <learning-rate>0.05</learning-rate>
+            <sample-selection-order>random</sample-selection-order>
+        </training-options>
+        <layers>
+            <layer>
+                <type>input</type>
+                <name>Input Layer</name>
+                <neurons>
+                    <neuron>
+                        <name>Input #1</name>
+                    </neuron>
+                    <neuron>
+                        <name>Input #2</name>
+                    </neuron>
+                </neurons>
+            </layer>
+            <layer>
+                <type>output</type>
+                <name>Output Layer</name>
+                <neurons>
+                    <neuron>
+                        <name>Output #1</name>
+                        <input-weights>
+                            <weight>0.0095325</weight>
+                            <weight>0.887637</weight>
+                            <weight>-0.362434</weight>
+                        </input-weights>
+                    </neuron>
+                </neurons>
+            </layer>
+        </layers>
+    </network-details>
+    <training-samples>
+        <sample>
+            <value>-1</value>
+            <value>-1</value>
+            <value>-1</value>
+        </sample>
+        <sample>
+            <value>-1</value>
+            <value>1</value>
+            <value>-1</value>
+        </sample>
+        <sample>
+            <value>1</value>
+            <value>-1</value>
+            <value>-1</value>
+        </sample>
+        <sample>
+            <value>1</value>
+            <value>1</value>
+            <value>1</value>
+        </sample>
+    </training-samples>
+</network>

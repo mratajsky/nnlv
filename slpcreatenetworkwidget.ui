@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SLPCreateNetworkWidget</class>
+ <widget class="QWidget" name="SLPCreateNetworkWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>590</width>
+    <height>393</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QFormLayout" name="formLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QLabel" name="labelHeadingGeneral">
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>General</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="labelNetworkName">
+     <property name="text">
+      <string>&amp;Name of the new network:</string>
+     </property>
+     <property name="buddy">
+      <cstring>editNetworkName</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QLineEdit" name="editNetworkName">
+     <property name="text">
+      <string>SLP</string>
+     </property>
+     <property name="maxLength">
+      <number>50</number>
+     </property>
+     <property name="placeholderText">
+      <string>Enter network name</string>
+     </property>
+     <property name="clearButtonEnabled">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="labelInputNeuronCount">
+     <property name="text">
+      <string>Neurons in the &amp;input layer:</string>
+     </property>
+     <property name="buddy">
+      <cstring>editInputNeuronCount</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QSpinBox" name="editInputNeuronCount">
+     <property name="minimum">
+      <number>2</number>
+     </property>
+     <property name="maximum">
+      <number>10</number>
+     </property>
+     <property name="value">
+      <number>2</number>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="labelOutputNeuronCount">
+     <property name="text">
+      <string>Neurons in the &amp;output layer:</string>
+     </property>
+     <property name="buddy">
+      <cstring>editOutputNeuronCount</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QSpinBox" name="editOutputNeuronCount">
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>10</number>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="labelInitialWeights">
+     <property name="text">
+      <string>Initial connection &amp;weights:</string>
+     </property>
+     <property name="buddy">
+      <cstring>radioWeightsRandom</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QRadioButton" name="radioWeightsRandom">
+     <property name="text">
+      <string>&amp;Random in the selected range:</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1">
+    <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,0,1">
+     <item>
+      <widget class="QDoubleSpinBox" name="editWeightsRandomMin">
+       <property name="decimals">
+        <number>6</number>
+       </property>
+       <property name="minimum">
+        <double>-1000000.000000000000000</double>
+       </property>
+       <property name="maximum">
+        <double>1000000.000000000000000</double>
+       </property>
+       <property name="value">
+        <double>-1.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>-</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDoubleSpinBox" name="editWeightsRandomMax">
+       <property name="decimals">
+        <number>6</number>
+       </property>
+       <property name="minimum">
+        <double>-1000000.000000000000000</double>
+       </property>
+       <property name="maximum">
+        <double>1000000.000000000000000</double>
+       </property>
+       <property name="value">
+        <double>1.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="6" column="1">
+    <widget class="QRadioButton" name="radioWeightsValue">
+     <property name="text">
+      <string>All the same selected &amp;value:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="1">
+    <widget class="QDoubleSpinBox" name="editWeightsValue">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="decimals">
+      <number>6</number>
+     </property>
+     <property name="minimum">
+      <double>-1000000.000000000000000</double>
+     </property>
+     <property name="maximum">
+      <double>1000000.000000000000000</double>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="0">
+    <widget class="QLabel" name="labelHeadingTrainingOptions">
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Training Options</string>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="0">
+    <widget class="QLabel" name="labelLearningRate">
+     <property name="text">
+      <string>&amp;Learning rate:</string>
+     </property>
+     <property name="buddy">
+      <cstring>editLearningRate</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="1">
+    <widget class="QDoubleSpinBox" name="editLearningRate">
+     <property name="decimals">
+      <number>6</number>
+     </property>
+     <property name="minimum">
+      <double>0.000001000000000</double>
+     </property>
+     <property name="maximum">
+      <double>1.000000000000000</double>
+     </property>
+     <property name="singleStep">
+      <double>0.100000000000000</double>
+     </property>
+     <property name="value">
+      <double>0.100000000000000</double>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="0">
+    <widget class="QLabel" name="labelSampleSelectionOrder">
+     <property name="text">
+      <string>Training &amp;sample selection order:</string>
+     </property>
+     <property name="buddy">
+      <cstring>comboBoxSampleSelectionOrder</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="1">
+    <widget class="QComboBox" name="comboBoxSampleSelectionOrder"/>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>editNetworkName</tabstop>
+  <tabstop>editInputNeuronCount</tabstop>
+  <tabstop>editOutputNeuronCount</tabstop>
+  <tabstop>radioWeightsRandom</tabstop>
+  <tabstop>editWeightsRandomMin</tabstop>
+  <tabstop>editWeightsRandomMax</tabstop>
+  <tabstop>radioWeightsValue</tabstop>
+  <tabstop>editWeightsValue</tabstop>
+  <tabstop>editLearningRate</tabstop>
+  <tabstop>comboBoxSampleSelectionOrder</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

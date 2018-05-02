@@ -1,0 +1,40 @@
+<RCC>
+    <qresource prefix="/">
+        <file>help/topics.xml</file>
+        <file>help/ack.html</file>
+        <file>help/menu-file.html</file>
+        <file>help/menu-help.html</file>
+        <file>help/menu-neural-network.html</file>
+        <file>help/menu-window.html</file>
+        <file>help/menu.html</file>
+        <file>help/ui-panels.html</file>
+        <file>help/ui.html</file>
+        <file>help/wizard-adaline.html</file>
+        <file>help/wizard-kohonen.html</file>
+        <file>help/wizard-mlp.html</file>
+        <file>help/wizard-rbf.html</file>
+        <file>help/wizard-slp.html</file>
+        <file>help/wizard.html</file>
+        <file>help/images/wizard-500.png</file>
+        <file>help/images/wizard-adaline-500.png</file>
+        <file>help/images/wizard-kohonen-500.png</file>
+        <file>help/images/wizard-mlp-500.png</file>
+        <file>help/images/wizard-rbf-500.png</file>
+        <file>help/images/wizard-slp-500.png</file>
+        <file>help/images/network-layout.png</file>
+        <file>help/images/options-500.png</file>
+        <file>help/ui-panels-status.html</file>
+        <file>help/images/network-status.png</file>
+        <file>help/ui-reset-weights.html</file>
+        <file>help/ui-training-set.html</file>
+        <file>help/images/reset-weights-500.png</file>
+        <file>help/images/training-set-500.png</file>
+        <file>help/ui-panels-layout.html</file>
+        <file>help/ui-panels-input-space.html</file>
+        <file>help/ui-panels-error.html</file>
+        <file>help/images/network-error.png</file>
+        <file>help/images/input-space.png</file>
+        <file>help/welcome.html</file>
+        <file>help/ui-training.html</file>
+    </qresource>
+</RCC>
